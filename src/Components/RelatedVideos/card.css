@@ -1,0 +1,40 @@
+/* MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-spacing-md-3 css-1xgjpwf-MuiGrid-root */
+
+
+.gridCard{
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: repeat(4,1fr);
+}
+/* .card-item{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    min-height: 10rem;
+} */
+
+@media screen and (max-width: 900px) {
+
+    .gridCard{
+
+      grid-template-columns: repeat(3,1fr);
+
+  }
+  }
+
+  @media screen and (max-width: 700px) {
+
+    .gridCard{
+
+        grid-template-columns: repeat(2,1fr);
+
+    }
+
+  }
+
+  @media screen and (max-width: 500px) {
+
+    .gridCardr{
+
+        grid-template-columns: repeat(1,1fr);
+
+    }
+  }

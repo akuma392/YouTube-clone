@@ -1,0 +1,58 @@
+.youtubeWrapperDesktop{
+    margin: 1.5rem 1rem ;
+    display: flex;
+    justify-content: space-between;
+}
+.youtubeWrapperMobile{
+    margin: 1.5rem 1rem ;
+}
+
+.youtubeWrapperDesktop div{
+    flex:0 1 63%;
+    margin-right: 2rem;
+
+}
+.youtubeWrapperMobile div{
+  max-width: 100%;
+}
+
+
+.youtubeWrapperDesktop .youTubeDetails{
+    display: flex;
+    align-items: center;
+  flex: 0 1 35%;
+}
+.youtubeWrapperMobile .youTubeDetails{
+    flex: 0 1 100%
+  }
+
+.youtubeDetailsTitle{
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.youtubeWrapperMobile div{
+
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+
+}
+
+.youtubeWrapperMobile iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.download-video{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0.5rem;
+}
