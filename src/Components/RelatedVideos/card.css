@@ -32,7 +32,7 @@
 
   @media screen and (max-width: 500px) {
 
-    .gridCardr{
+    .gridCard{
 
         grid-template-columns: repeat(1,1fr);
 

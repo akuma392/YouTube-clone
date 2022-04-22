@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import YouTube from "react-youtube";
 import { useParams } from "react-router";
 import { useMediaQuery } from "react-responsive";
-import { options } from "../../utils/utils";
+import { options, timeConvert } from "../../utils/utils";
 import { mockData } from "./mockData";
 import RelatedVideos from "../RelatedVideos/RelatedVideos";
 import "./VideoPlayer.css";
@@ -28,6 +28,8 @@ const VideoPlayer = () => {
       .then((response) => setVideo(response));
     // setVideo(mockData);
   }, [videoId]);
+
+  console.log(video, "testttttttttttttttttttt");
   if (!video) {
     return (
       <>
@@ -53,11 +55,12 @@ const VideoPlayer = () => {
 export default VideoPlayer;
 
 const YoutubeVideoDetail = ({ data }) => {
-  const { title, viewCount } = data;
+  const { title, viewCount, lengthSeconds } = data;
   return (
-    <article className="youtubeDetails">
+    <article className="youtubeDetails" id="youtubeDetails">
       <p className="youtubeDetailsTitle">{title}</p>
       <span>{viewCount} views</span>
+      <span className="time-convert">{timeConvert(lengthSeconds)}</span>
     </article>
   );
 };

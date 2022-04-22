@@ -6,7 +6,7 @@ import "./videoCards.css";
 const VideoCards = ({ items }) => {
   return (
     <div className="video-cards">
-      {items.map((card) => {
+      {items?.map((card) => {
         return (
           <div key={card?.id}>
             <Link

@@ -2,7 +2,7 @@ import Reacct, { useEffect, useState } from "react";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
+import Select from "@mui/material/Select";
 
 export default function DownloadVideo({ data }) {
   const [quality, setQuality] = useState("");
@@ -33,12 +33,6 @@ export default function DownloadVideo({ data }) {
     }
     return acc;
   }, []);
-
-  //   useEffect(() => {
-  //     if (quality) {
-  //       setUrl(uniqueVideo.find((elm) => elm.quality === quality));
-  //     }
-  //   }, [quality]);
 
   const handleDownload = () => {
     if (quality) {
@@ -72,13 +66,16 @@ export default function DownloadVideo({ data }) {
       </FormControl>
 
       {quality && (
-        <a href={url?.url} download target="_blank">
-          <i
-            class="fa fa-download"
-            aria-hidden="true"
-            onClick={handleDownload}
-          ></i>
-        </a>
+        <>
+          <a href={url?.url} download target="_blank">
+            <i
+              class="fa fa-download"
+              aria-hidden="true"
+              onClick={handleDownload}
+            ></i>
+          </a>
+          <p>{url?.sizeText}</p>
+        </>
       )}
     </div>
   );
